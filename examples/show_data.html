@@ -19,8 +19,8 @@
     <![endif]-->
 
     <!-- Zabuto -->
-    <link rel="stylesheet" type="text/css" href="//zabuto.com/assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="//zabuto.com/assets/css/examples.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/examples.css">
 
     <!-- Zabuto Calendar -->
     <script src="../zabuto_calendar.min.js"></script>
@@ -33,7 +33,8 @@
 <div class="container example">
 
     <h1>
-        Calendar <span>Show Data</span>
+		<a href="index.html">Calendar</a>
+        <span>Show Data</span>
         <ul class="nav nav-pills pull-right">
             <li><a class="pull-right" href="display_settings.html">&laquo; Display Settings</a></li>
             <li><a class="pull-right" href="set_legend.html">Set Legend &raquo;</a></li>
@@ -43,7 +44,7 @@
     <hr>
 
     <div class="row">
-        <div class="col-xs-6">
+        <div class="col-md-6 col-sm-12">
             <p>You can add date events to the calendar by using fixed data or an AJAX GET request.
                 The events have to be returned as a JSON encoded array in a specified format.</p>
 
@@ -90,7 +91,7 @@
                 </tr>
             </table>
         </div>
-        <div class="col-xs-6">
+        <div class="col-md-6 col-sm-12">
             <p>Below you can find an example of the JSON data format:</p>
 <code>[
   {
@@ -112,7 +113,7 @@
     <hr>
 
     <div class="row">
-        <div class="col-xs-5">
+        <div class="col-md-5 col-sm-12">
 
             <div id="my-calendar"></div>
 
@@ -128,7 +129,7 @@
             </script>
 
         </div>
-        <div class="col-xs-6 col-xs-offset-1">
+        <div class="col-md-6 col-sm-12 col-md-offset-1">
 
 <code>
 &lt;!-- show date events with a modal window --&gt;
