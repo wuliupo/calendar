@@ -104,7 +104,7 @@ function myNavFunction(id) {
 
             <div id="my-calendar"></div>
 
-            <script type="application/javascript">
+            <script type="application/javascript" id="example">
                 $(document).ready(function () {
                     $("#date-popover").popover({html: true, trigger: "manual"});
                     $("#date-popover").hide();
@@ -154,67 +154,11 @@ function myNavFunction(id) {
             </script>
 
         </div>
-        <div class="col-md-6 col-sm-12 col-md-offset-1">
-
-<code>
-&lt;div id=&quot;date-popover&quot; class=&quot;popover top&quot; style=&quot;...&quot;&gt;
-    ...
-    &lt;div id=&quot;date-popover-content&quot; class=&quot;popover-content&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;my-calendar&quot;&gt;&lt;/div&gt;
-
-&lt;script type=&quot;application/javascript&quot;&gt;
-    $(document).ready(function () {
-        $(&quot;#date-popover&quot;).popover(...);
-        ...
-
-        $(&quot;#my-calendar&quot;).zabuto_calendar({
-            <span>action: function () {
-                return myDateFunction(this.id, false);
-            },
-            action_nav: function () {
-                return myNavFunction(this.id);
-            }</span>,
-            ajax: {
-                url: &quot;show_data.php?action=1&quot;,
-                modal: true
-            },
-            legend: [
-                {type: &quot;text&quot;, label: &quot;Special event&quot;, badge: &quot;00&quot;},
-                {type: &quot;block&quot;, label: &quot;Regular event&quot;}
-            ]
-        });
-    });
-
-    <span>function myDateFunction(id, fromModal) {
-        $(&quot;#date-popover&quot;).hide();
-        if (fromModal) {
-            $(&quot;#&quot; + id + &quot;_modal&quot;).modal(&quot;hide&quot;);
-        }
-        var date = $(&quot;#&quot; + id).data(&quot;date&quot;);
-        var hasEvent = $(&quot;#&quot; + id).data(&quot;hasEvent&quot;);
-        if (hasEvent &amp;&amp; !fromModal) {
-            return false;
-        }
-        $(&quot;#date-popover-content&quot;).html('You clicked on date ' + date);
-        $(&quot;#date-popover&quot;).show();
-        return true;
-    }
-
-    function myNavFunction(id) {
-        $(&quot;#date-popover&quot;).hide();
-        var nav = $(&quot;#&quot; + id).data(&quot;navigation&quot;);
-        var to = $(&quot;#&quot; + id).data(&quot;to&quot;);
-        console.log('nav ' + nav + ' to: \ + to.month + '/' + to.year);
-    }</span>
-&lt;/script&gt;
-</code>
-
+        <div class="col-md-6 col-sm-12 col-md-offset-1" code-content="#example">
         </div>
     </div>
 </div>
 <!-- /container -->
-
+<script src="example.js"></script>
 </body>
 </html>

@@ -97,8 +97,9 @@
 
             <div id="my-calendar"></div>
 
-            <script type="application/javascript">
+            <script type="application/javascript" id="example">
                 $(document).ready(function () {
+				// set the border for the days and hide the days of the week header plus start the week on sunday and not monday
                     $("#my-calendar").zabuto_calendar({
                         cell_border: true,
                         today: true,
@@ -113,32 +114,12 @@
             </script>
 
         </div>
-        <div class="col-md-6 col-sm-12 col-md-offset-1">
-
-<code>
-&lt;!-- set the border for the days and hide the days of the week header
-     plus start the week on sunday and not monday --&gt;
-&lt;script type=&quot;application/javascript&quot;&gt;
-  $(document).ready(function () {
-    $(&quot;#my-calendar&quot;).zabuto_calendar({
-      <span>cell_border: true,
-      today: true,
-      show_days: false,
-      weekstartson: 0,
-      nav_icon: {
-        prev: '&lt;i class=&quot;fa fa-chevron-circle-left&quot;&gt;&lt;/i&gt;',
-        next: '&lt;i class=&quot;fa fa-chevron-circle-right&quot;&gt;&lt;/i&gt;'
-      }</span>
-    });
-  });
-&lt;/script&gt;
-</code>
-
+        <div class="col-md-6 col-sm-12 col-md-offset-1" code-content="#example">
         </div>
     </div>
 
 </div>
 <!-- /container -->
-
+<script src="example.js"></script>
 </body>
 </html>

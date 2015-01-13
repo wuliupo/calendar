@@ -119,7 +119,7 @@
                 }
             </style>
 
-            <script type="application/javascript">
+            <script type="application/javascript" id="example">
                 $(document).ready(function () {
                     $("#my-calendar").zabuto_calendar({
                         legend: [
@@ -138,34 +138,12 @@
             </script>
 
         </div>
-        <div class="col-md-6 col-sm-12 col-md-offset-1">
-
-<code>
-&lt;!-- set the legend for the calendar --&gt;
-&lt;script type=&quot;application/javascript&quot;&gt;
-  $(document).ready(function () {
-    $(&quot;#my-calendar&quot;).zabuto_calendar({
-      <span>legend: [
-        {type: &quot;text&quot;, label: &quot;Special event&quot;, badge: &quot;00&quot;},
-        {type: &quot;block&quot;, label: &quot;Regular event&quot;, classname: &quot;purple&quot;},
-        {type: &quot;spacer&quot;},
-        {type: &quot;text&quot;, label: &quot;Bad&quot;},
-        {type: &quot;list&quot;, list: [&quot;grade-1&quot;, &quot;grade-2&quot;, &quot;grade-3&quot;, &quot;grade-4&quot;]},
-        {type: &quot;text&quot;, label: &quot;Good&quot;}
-      ]</span>,
-      ajax: {
-        url: &quot;show_data.php?grade=1&quot;
-      }
-    });
-  });
-&lt;/script&gt;
-</code>
-
+        <div class="col-md-6 col-sm-12 col-md-offset-1" code-content="#example">
         </div>
     </div>
 
 </div>
 <!-- /container -->
-
+<script src="example.js"></script>
 </body>
 </html>

@@ -110,8 +110,9 @@
 
             <div id="my-calendar"></div>
 
-            <script type="application/javascript">
+            <script type="application/javascript" id="example">
                 $(document).ready(function () {
+				//set the language code
                     $("#my-calendar").zabuto_calendar({
                         language: "nl"
                     });
@@ -119,24 +120,12 @@
             </script>
 
         </div>
-        <div class="col-md-6 col-sm-12 col-md-offset-1">
-
-<code>
-    &lt;!-- set the language code --&gt;
-    &lt;script type=&quot;application/javascript&quot;&gt;
-    $(document).ready(function () {
-    $(&quot;#my-calendar&quot;).zabuto_calendar({
-    <span>language: &quot;nl&quot;</span>
-    });
-    });
-    &lt;/script&gt;
-</code>
-
+        <div class="col-md-6 col-sm-12 col-md-offset-1" code-content="#example">
         </div>
     </div>
 
 </div>
 <!-- /container -->
-
+<script src="example.js"></script>
 </body>
 </html>

@@ -117,7 +117,7 @@
 
             <div id="my-calendar"></div>
 
-            <script type="application/javascript">
+            <script type="application/javascript" id="example">
                 $(document).ready(function () {
                     $("#my-calendar").zabuto_calendar({
                         ajax: {
@@ -129,39 +129,11 @@
             </script>
 
         </div>
-        <div class="col-md-6 col-sm-12 col-md-offset-1">
-
-<code>
-&lt;!-- show date events with a modal window --&gt;
-&lt;script type=&quot;application/javascript&quot;&gt;
-  $(document).ready(function () {
-    $(&quot;#my-calendar&quot;).zabuto_calendar({
-      <span>ajax: {
-          url: &quot;show_data.php&quot;,
-          modal: true
-      }</span>
-    });
-  });
-&lt;/script&gt;
-
-&lt;!-- use fixed data --&gt;
-&lt;script type=&quot;application/javascript&quot;&gt;
-var eventData = [
-    {"date":"2015-01-01","badge":false,"title":"Example 1"},
-    {"date":"2015-01-02","badge":true,"title":"Example 2"}
-];
-$(document).ready(function () {
-$(&quot;#my-calendar&quot;).zabuto_calendar({
-  <span>data: eventData</span>
-});
-});
-&lt;/script&gt;
-</code>
-
+        <div class="col-md-6 col-sm-12 col-md-offset-1" code-content="#example">
         </div>
     </div>
 </div>
 <!-- /container -->
-
+<script src="example.js"></script>
 </body>
 </html>

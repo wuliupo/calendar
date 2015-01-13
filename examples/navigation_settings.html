@@ -74,8 +74,10 @@
 
             <div id="my-calendar"></div>
 
-            <script type="application/javascript">
+            <script type="application/javascript" id="example">
                 $(document).ready(function () {
+					//set the calendar to March 2015
+					//do not allow previous months and only allow 2 months in the future
                     $("#my-calendar").zabuto_calendar({
                         year: 2015,
                         month: 3,
@@ -86,29 +88,12 @@
             </script>
 
         </div>
-        <div class="col-md-6 col-sm-12 col-md-offset-1">
-
-<code>
-&lt;!-- set the calendar to March 2015
-     do not allow previous months and only
-     allow 2 months in the future --&gt;
-&lt;script type=&quot;application/javascript&quot;&gt;
-  $(document).ready(function () {
-    $(&quot;#my-calendar&quot;).zabuto_calendar({
-      <span>year: 2015,
-      month: 3,
-      show_previous: false,
-      show_next: 2</span>
-    });
-  });
-&lt;/script&gt;
-</code>
-
+        <div class="col-md-6 col-sm-12 col-md-offset-1" code-content="#example">
         </div>
     </div>
 
 </div>
 <!-- /container -->
-
+<script src="example.js"></script>
 </body>
 </html>

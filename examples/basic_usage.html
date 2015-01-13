@@ -55,39 +55,23 @@
 
             <div id="my-calendar"></div>
 
-            <script type="application/javascript">
+            <script type="application/javascript" id="example">
+				//1. include jQuery / Bootstrap
+				//2. include the calendar js (zabuto_calendar.min.js) and css (zabuto_calendar.min.css) files
+				//3. define the calendar element
+				//4. initialize the calendar on ready
                 $(document).ready(function () {
                     $("#my-calendar").zabuto_calendar();
                 });
             </script>
 
         </div>
-        <div class="col-md-6 col-sm-12 col-md-offset-1">
-
-<code>
-&lt;!-- include jQuery / Bootstrap --&gt;
-...
-
-&lt;!-- include the calendar js and css files --&gt;
-&lt;script src=&quot;../zabuto_calendar.min.js&quot;&gt;&lt;/script&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../zabuto_calendar.min.css&quot;&gt;
-
-&lt;!-- define the calendar element --&gt;
-&lt;div id=&quot;my-calendar&quot;&gt;&lt;/div&gt;
-
-&lt;!-- initialize the calendar on ready --&gt;
-&lt;script type=&quot;application/javascript&quot;&gt;
-    $(document).ready(function () {
-        $(&quot;#my-calendar&quot;).zabuto_calendar();
-    });
-&lt;/script&gt;
-</code>
-
+        <div class="col-md-6 col-sm-12 col-md-offset-1" code-content="#example">
         </div>
     </div>
 
 </div>
 <!-- /container -->
-
+<script src="example.js"></script>
 </body>
 </html>
